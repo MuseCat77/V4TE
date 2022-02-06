@@ -7,7 +7,7 @@
 		color: #000000; 
 		text-align: center; 
 		font-family: sans-serif; 
-		width: 850px; 
+		max-width: 850px;
 		margin: auto auto 8px;
 	} 
 	a, a:visited {
@@ -90,7 +90,6 @@
 		margin-left: 5px;
 	}
 	.gridWrapper { /*ex gridWrapper*/
-		background: white;
 		display: grid;
 		text-align: left;
 	}
@@ -113,21 +112,314 @@
 <body>
 	<div class="substrate">
 		<div class="heading">Theme Editor</div>
-		<div id="preview">
-			<div class="gridWrapper backgroundColorPreview">
+		<div id="preview" class="backgroundColorPreview" >
+			<div class="gridWrapper">
 				<div class="mainColorPreview" style="height: 30px; background: linear-gradient(#454449, #222126);">
 					<span class="onMainTextColorPreview" style="color: #ffffff">Preview</span>
 				</div>
-				<div class="backgroundColorPreview" style="height: 60px;">
-					<svg style="width:50px; height:60px; float: left;" viewBox="0 0 24 24">
-    					<path fill="currentColor" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
+				<div>
+					<svg class="nonLoadedContentColorPreview" style="width:50px; height:60px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
+    					<path fill="#eee" d="M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />
+					</svg>
+					<svg style="width:30px; height:60px; float: right; padding-right: 5px;" viewBox="0 0 24 24">
+						<linearGradient class="gotoColorPreview" id="gotoColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#gotoColorPreview)" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
 					</svg>
 					<div style="display: grid;">
-						<span style="width: 100px; line-height: 40px; float: left;">Username</span>
-						<span style="width: 100px; line-height: 20px; float: left;">Status</span>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Username</span>
+						<span class="captionColorPreview" style="line-height: 25px; float: left;">my profile (caption)</span>
 					</div>
 				</div>
-				<div class="warn">Preview is under development</div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+						<linearGradient class="iconColorPreview" id="iconColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#iconColorPreview)" d="M20 3H4C2.89 3 2 3.89 2 5V19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V5C22 3.89 21.11 3 20 3M5 7H10V13H5V7M19 17H5V15H19V17M19 13H12V11H19V13M19 9H12V7H19V9Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">Newsfeed</span>
+					</div>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">Messages</span>
+						<span class="captionColorPreview" style="line-height: 20px; float: right; padding-right: 5px; padding-top: 10px;">4</span>
+					</div>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M12 4C14.2091 4 16 5.79086 16 8C16 10.2091 14.2091 12 12 12C9.79086 12 8 10.2091 8 8C8 5.79086 9.79086 4 12 4ZM12 14C16.4183 14 20 15.7909 20 18L20 20L4 20L4 18C4 15.7909 7.58172 14 12 14Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">Friends</span>
+						<span class="captionColorPreview" style="line-height: 20px; float: right; padding-right: 5px; padding-top: 10px;">10/107</span>
+					</div>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M16 17V19H2V17S2 13 9 13 16 17 16 17M12.5 7.5A3.5 3.5 0 1 0 9 11A3.5 3.5 0 0 0 12.5 7.5M15.94 13A5.32 5.32 0 0 1 18 17V19H22V17S22 13.37 15.94 13M15 4A3.39 3.39 0 0 0 13.07 4.59A5 5 0 0 1 13.07 10.41A3.39 3.39 0 0 0 15 11A3.5 3.5 0 0 0 15 4Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">Groups</span>
+						<span class="captionColorPreview" style="line-height: 20px; float: right; padding-right: 5px; padding-top: 10px;">69</span>
+					</div>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M12 3V13.55C11.41 13.21 10.73 13 10 13C7.79 13 6 14.79 6 17S7.79 21 10 21 14 19.21 14 17V7H18V3H12Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">Music</span>
+						<span class="captionColorPreview" style="line-height: 20px; float: right; padding-right: 5px; padding-top: 10px;">703</span>
+					</div>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">Settings</span>
+					</div>
+				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div class="backgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+					<svg style="width:30px; height:60px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M12 8C8.44 8 6.65 12.31 9.17 14.83C11.69 17.35 16 15.56 16 12C16 9.79 14.21 8 12 8M5 15H3V19C3 20.1 3.9 21 5 21H9V19H5M5 5H9V3H5C3.9 3 3 3.9 3 5V9H5M19 3H15V5H19V9H21V5C21 3.9 20.1 3 19 3M19 19H15V21H19C20.1 21 21 20.1 21 19V15H19" />
+					</svg>
+					<span class="captionColorPreview" style="line-height: 60px; float: right; padding-right: 5px;">caption</span>
+					<div style="display: grid;">
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Element</span>
+						<span class="descriptionColorPreview" style="line-height: 25px; float: left;">description</span>
+					</div>
+				</div>
+				<div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+					<svg style="width:30px; height:60px; float: left;" viewBox="0 0 24 24">
+						<linearGradient class="focusedIconColorPreview" id="focusedIconColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#focusedIconColorPreview)" d="M12 8C8.44 8 6.65 12.31 9.17 14.83C11.69 17.35 16 15.56 16 12C16 9.79 14.21 8 12 8M5 15H3V19C3 20.1 3.9 21 5 21H9V19H5M5 5H9V3H5C3.9 3 3 3.9 3 5V9H5M19 3H15V5H19V9H21V5C21 3.9 20.1 3 19 3M19 19H15V21H19C20.1 21 21 20.1 21 19V15H19" />
+					</svg>
+					<span class="focusedCaptionColorPreview" style="line-height: 60px; float: right; padding-right: 5px;">caption</span>
+					<div style="display: grid;">
+						<span class="focusedTextColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Focused element</span>
+						<span class="focusedDescriptionColorPreview" style="line-height: 25px; float: left;">description</span>
+					</div>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
+						<linearGradient class="checkboxColorPreview" id="checkboxColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#checkboxColorPreview)" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Blank checkbox ring</span>
+				</div>
+				<div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
+						<linearGradient class="focusedCheckboxColorPreview" id="focusedCheckboxColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#focusedCheckboxColorPreview)" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+						<span class="focusedTextColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Blank focused checkbox ring</span>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
+						<linearGradient class="selectedCheckboxColorPreview" id="selectedCheckboxColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#selectedCheckboxColorPreview)" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+					</svg>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Selected checkbox</span>
+				</div>
+				<div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
+						<linearGradient class="focusedCheckboxColorPreview" id="focusedCheckboxColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#focusedCheckboxColorPreview)" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" />
+					</svg>
+						<span class="focusedTextColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Selected focused checkbox</span>
+				</div>
+				<div>
+					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
+    					<path fill="url(#gotoColorPreview)" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+					</svg>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Goto chevron</span>
+				</div>
+				<div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
+						<linearGradient class="focusedGotoColorPreview" id="focusedGotoColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#focusedCheckboxColorPreview)" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+					</svg>
+						<span class="focusedTextColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Focused goto chevron</span>
+				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div>
+					<svg class="nonLoadedContentColorPreview" style="width:50px; height:60px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
+    					<path fill="#ccc" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<div>
+						<span class="captionColorPreview" style="line-height: 20px; float: right; padding-top: 10px; padding-right: 5px;">8:08</span>
+					</div>
+					<div style="display: grid;">
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Nonloaded Dude</span>
+						<span class="captionColorPreview" style="line-height: 25px; float: left;">You: Fuck js</span>
+					</div>
+				</div>
+				<div class="unreadBackgroundColorPreview">
+					<svg class="nonLoadedContentColorPreview" style="width:50px; height:60px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
+    					<path fill="#ccc" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<svg style="width:25px; height:25px; float: right; margin-top: 30px" viewBox="0 0 24 24">
+						<linearGradient class="mutedUnreadCloudBackgroundColorPreview" id="mutedUnreadCloudBackgroundColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#mutedUnreadCloudBackgroundColorPreview)" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<span class="captionColorPreview" style="line-height: 20px; float: right; margin-right: -20px; padding-top: 10px;">8:07</span>
+					<span class="unreadCloudForegroundColorPreview" style="line-height: 20px; float: right; margin-right: -28px; padding-top: 34px;">1</span>
+					<div style="display: grid;">
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Muted Dude</span>
+						<span class="captionColorPreview" style="line-height: 25px; float: left;">wen vk4me update</span>
+					</div>
+				</div>
+				<div class="unreadBackgroundColorPreview">
+					<svg class="nonLoadedContentColorPreview" style="width:50px; height:60px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
+    					<path fill="#ccc" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<svg style="width:25px; height:25px; float: right; margin-top: 30px" viewBox="0 0 24 24">
+						<linearGradient class="unreadCloudBackgroundColorPreview" id="unreadCloudBackgroundColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#unreadCloudBackgroundColorPreview)" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<span class="captionColorPreview" style="line-height: 20px; float: right; margin-right: -20px; padding-top: 10px;">8:07</span>
+					<span class="unreadCloudForegroundColorPreview" style="line-height: 20px; float: right; margin-right: -28px; padding-top: 34px;">1</span>
+					<div style="display: grid;">
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Unmuted Dude</span>
+						<span class="captionColorPreview" style="line-height: 25px; float: left;">look at this dude ahhaha</span>
+					</div>
+				</div>
+				<div class="focusedBackgroundColorPreview">
+					<svg class="nonLoadedContentColorPreview" style="width:50px; height:60px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
+    					<path fill="#ccc" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<svg style="width:25px; height:25px; float: right; margin-top: 30px" viewBox="0 0 24 24">
+						<linearGradient class="focusedUnreadCloudBackgroundColorPreview" id="focusedUnreadCloudBackgroundColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+    					<path fill="url(#focusedUnreadCloudBackgroundColorPreview)" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<span class="focusedCaptionColorPreview" style="line-height: 20px; float: right; margin-right: -20px; padding-top: 10px;">8:07</span>
+					<span class="focusedUnreadCloudForegroundColorPreview" style="line-height: 20px; float: right; margin-right: -28px; padding-top: 34px;">1</span>
+					<div style="display: grid;">
+						<span class="focusedTextColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Selected Dude</span>
+						<span class="focusedCaptionColorPreview" style="line-height: 25px; float: left;">this message is in focus</span>
+					</div>
+				</div>
+				<div>
+					<svg class="nonLoadedContentColorPreview" style="width:50px; height:60px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
+    					<path fill="#ccc" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+					</svg>
+					<div>
+						<span class="captionColorPreview" style="line-height: 20px; float: right; padding-top: 10px; padding-right: 5px;">8:06</span>
+					</div>
+					<div style="display: grid;">
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Ignorer Dude</span>
+						<div class="unreadBackgroundColorPreview">
+							<span class="captionColorPreview" style="line-height: 25px; float: left;">You: hello??</span>
+						</div>
+					</div>
+				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">Some elements</span>
+					</div>
+				</div>
+				<div class="itemSeparatorColorPreview" style="height: 1px;"></div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">for separator</span>
+					</div>
+				</div>
+				<div class="itemSeparatorColorPreview" style="height: 1px;"></div>
+				<div>
+					<svg style="width:30px; height:40px; float: left;" viewBox="0 0 24 24">
+    					<path fill="url(#iconColorPreview)" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 20px; float: left; padding-left: 5px; padding-top: 10px;">element testing</span>
+					</div>
+				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div>
+					<span class="textColorPreview">Slider</span>
+				</div>
+				<div style="height: px; display: table-cell; vertical-align: middle;">
+					<svg width="300" height="50" viewBox="0 0 79.374999 13.229167">
+					<rect
+       					style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.264583"
+       					id="rect33"
+       					width="22.309059"
+       					height="2.6396215"
+       					x="-0.08514908"
+       					y="5.279243" />
+    				<rect
+       					style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.404708"
+       					id="rect33-9"
+       					width="52.196388"
+       					height="2.6396215"
+       					x="27					.144655"
+       					y="5.3218174" />
+    				<circle
+       					style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.264583"
+       					id="path57"
+       					cx="24.480362"
+       					cy="6.5139046"
+       					r="3.0227923" />
+    				<circle
+       					style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.264583"
+       					id="path57-5"
+       					cx="24.437786"
+       					cy="6.5564795"
+       					r="2.5970469" />
+      				</svg>
+				</div>
+				<div>
+					<span class="textColorPreview">Focused slider</span>
+				</div>
+				<!--<div class="warn">Preview is under development</div>-->
 			</div>
 		</div>
 		<div id="themingElementsList">
@@ -245,7 +537,7 @@
 
    				checkboxColor: {
    					name_en: '',
-   					name_ru: 'Цвет чекбокса (градиент)',
+   					name_ru: 'Цвет кольца чекбокса (градиент)',
    					hexValue: '',
    				},
 
@@ -658,17 +950,18 @@
    				},
 
    			}
+
    			Object.seal(colorData);
    			var defb64 = "RURJIiEm________1NTUdZ3sR268____AAAAPj4-d3d3lJSUZGRk1NTUlJSUlJSUZGRkZGRkdZ3sR268________________1NTUR268CdAJ________BpcG1NTU1NTUdZ3sR2686e706e70____dZ3sR268dZ3s____1NTU3t7e5OTk1NTUxMTE5OTkdZ3sR2685OTkxMTEdZ3sR268tLS0ytn4kajX5OTkxMTEip_KtLS0lJSUR268ZGRk________Snao____AAAA_____4B-yElH_11b_4B-yElH_11bAAAA3t7e____3t7egoKCZmZm____1NTUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
 
    			var importedb64 = defb64;
    			var themeName = 'NewTheme'
    			var themeEngVer = '3.0.1'
-
+   			/*
    			window.onbeforeunload = function (e) {
    				return "Unsaved changes will be gone";
     		};
-
+    		*/
     		function propChanger(prop) {
     			if (prop.name == 'theme-name')
     				themeName = prop.value
@@ -767,7 +1060,15 @@
    					let startOfGradient = "#" + colorData[inputElem.id].hexValue
    					let endOfGradient = "#" + colorData[inputElem.id + "_"].hexValue
    					for (let i in elemPreview) {
-   						elemPreview[i].style.background = "linear-gradient(" + startOfGradient + ", " + endOfGradient + ")"
+   						if (elemPreview[i].tagName == 'linearGradient') {
+   							/*TODO: change getElementsByClassName to getElementById if needed */
+   							console.log(elemPreview)
+   							elemPreview[i].children[0].setAttribute("stop-color", startOfGradient)
+   							elemPreview[i].children[1].setAttribute("stop-color", endOfGradient)
+   						}
+   						else {
+   							elemPreview[i].style.background = "linear-gradient(" + startOfGradient + ", " + endOfGradient + ")"
+   						}
    					}
    				}
    				/* иначе если изменился второй цвет */
@@ -776,15 +1077,26 @@
    					let startOfGradient = "#" + colorData[inputElem.id.slice(0, -1)].hexValue
    					let endOfGradient = "#" + colorData[inputElem.id].hexValue
    					for (let i in elemPreview) {
-   						elemPreview[i].style.background = "linear-gradient(" + startOfGradient + ", " + endOfGradient + ")"
+   						if (elemPreview[i].tagName == 'linearGradient') {
+   							console.log(elemPreview)
+   							elemPreview[i].children[0].setAttribute("stop-color", startOfGradient)
+   							elemPreview[i].children[1].setAttribute("stop-color", endOfGradient)
+   						}
+   						else {
+   							elemPreview[i].style.background = "linear-gradient(" + startOfGradient + ", " + endOfGradient + ")"
+   						}
    					}
    				}
    				/* иначе если второго цвета нет */
    				else if (inputElem.id.slice(-1) != "_" && (inputElem.id + "_" in colorData) == false) {
-   					let elemPreview = Array.from(document.getElementsByClassName('onMainTextColorPreview'))
+   					let elemPreview = Array.from(document.getElementsByClassName(inputElem.id + 'Preview'))
+   					/*console.log(elemPreview)*/
    					for (let i in elemPreview) {
-   						if (elemPreview[i].tagName == 'SPAN') {
+   						if (elemPreview[i].tagName == 'SPAN' || elemPreview[i].tagName == 'B') {
    							elemPreview[i].style.color = "#" + colorData[inputElem.id].hexValue
+   						}
+   						else if (elemPreview[i].tagName == 'svg') {
+   							elemPreview[i].children[0].setAttribute("fill", "#" + colorData[inputElem.id].hexValue)
    						}
    						else {
    							elemPreview[i].style.background = "#" + colorData[inputElem.id].hexValue
