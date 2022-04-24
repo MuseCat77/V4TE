@@ -387,33 +387,24 @@
 					<span class="textColorPreview">Slider</span>
 				</div>
 				<div style="height: px; display: table-cell; vertical-align: middle;">
-					<svg width="300" height="50" viewBox="0 0 79.374999 13.229167">
-					<rect
-       					style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.264583"
-       					id="rect33"
-       					width="22.309059"
-       					height="2.6396215"
-       					x="-0.08514908"
-       					y="5.279243" />
-    				<rect
-       					style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.404708"
-       					id="rect33-9"
-       					width="52.196388"
-       					height="2.6396215"
-       					x="27					.144655"
-       					y="5.3218174" />
-    				<circle
-       					style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.264583"
-       					id="path57"
-       					cx="24.480362"
-       					cy="6.5139046"
-       					r="3.0227923" />
-    				<circle
-       					style="fill:#ff0000;fill-rule:evenodd;stroke-width:0.264583"
-       					id="path57-5"
-       					cx="24.437786"
-       					cy="6.5564795"
-       					r="2.5970469" />
+					<svg width="270" height="50" viewBox="0 0 79.374999 13.229167">
+						<linearGradient class="sliderColorPreview" id="sliderColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+						<linearGradient class="sliderLoadedColorPreview" id="sliderLoadedColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+						<linearGradient class="sliderButtonColorPreview" id="sliderButtonColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+
+						<rect style="fill:url(#sliderLoadedColorPreview);fill-rule:evenodd;stroke-width:0.264583" width="25" height="2" x="-0.08514908" y="5.6"></rect>
+    					<rect style="fill:url(#sliderColorPreview);fill-rule:evenodd;stroke-width:0.404708" id="rect33-9" width="55" height="2" x="26" y="5.6"></rect>
+    					<circle class="sliderButtonBorderColorPreview" style="fill:url(#sliderLoadedColorPreview);fill-rule:evenodd;stroke-width:0.264583" id="path57" cx="24.480362" cy="6.5139046" r="3.0227923"></circle>
+    					<circle style="fill:url(#sliderButtonColorPreview);fill-rule:evenodd;stroke-width:0.264583" id="path57-5" cx="24.437786" cy="6.5564795" r="2.5970469"></circle>
       				</svg>
 				</div>
 				<div>
@@ -452,500 +443,417 @@
    		<script type="text/javascript">
    			var colorData = {
    				mainColor: {
-   					name_en: '',
-   					name_ru: 'Основной цвет (градиент)',
+   					name: 'Основной цвет (градиент)',
    					hexValue: '',
    				},
 
    				mainColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				onMainTextColor: {
-   					name_en: '',
-   					name_ru: 'Цвет текста на панелях',
+   					name: 'Цвет текста на панелях',
    					hexValue: '',
    				},
 
    				onMainIconColor: {
-   					name_en: '',
-   					name_ru: 'Цвет иконок на панелях (градиент)',
+   					name: 'Цвет иконок на панелях (градиент)',
    					hexValue: '',
    				},
 
    				onMainIconColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedMainColor: {
-   					name_en: '',
-   					name_ru: 'Цвет элемента в фокусе на панелях (градиент)',
+   					name: 'Цвет элемента в фокусе на панелях (градиент)',
    					hexValue: '',
    				},
 
    				focusedMainColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				backgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет фона',
+   					name: 'Цвет фона',
    					hexValue: '',
    				},
 
    				textColor: {
-   					name_en: '',
-   					name_ru: 'Цвет текста',
+   					name: 'Цвет текста',
    					hexValue: '',
    				},
 
    				descriptionColor: {
-   					name_en: '',
-   					name_ru: 'Цвет текста описания',
+   					name: 'Цвет текста описания',
    					hexValue: '',
    				},
 
    				captionColor: {
-   					name_en: '',
-   					name_ru: 'Цвет надписей',
+   					name: 'Цвет надписей',
    					hexValue: '',
    				},
 
    				iconColor: {
-   					name_en: '',
-   					name_ru: 'Цвет иконок (градиент)',
+   					name: 'Цвет иконок (градиент)',
    					hexValue: '',
    				},
 
    				iconColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				borderColor: {
-   					name_en: '',
-   					name_ru: 'Цвет обводки',
+   					name: 'Цвет обводки',
    					hexValue: '',
    				},
 
    				checkboxColor: {
-   					name_en: '',
-   					name_ru: 'Цвет кольца чекбокса (градиент)',
+   					name: 'Цвет кольца чекбокса (градиент)',
    					hexValue: '',
    				},
 
    				gotoColor: {
-   					name_en: '',
-   					name_ru: 'Цвет стрелки перехода',
+   					name: 'Цвет стрелки перехода',
    					hexValue: '',
    				},
 
    				checkboxColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				gotoColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет элемента в фокусе (градиент)',
+   					name: 'Цвет элемента в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				focusedBackgroundColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedTextColor: {
-   					name_en: '',
-   					name_ru: 'Цвет текста в фокусе',
+   					name: 'Цвет текста в фокусе',
    					hexValue: '',
    				},
 
    				focusedDescriptionColor: {
-   					name_en: '',
-   					name_ru: 'Цвет описания в фокусе',
+   					name: 'Цвет описания в фокусе',
    					hexValue: '',
    				},
 
    				focusedCaptionColor: {
-   					name_en: '',
-   					name_ru: 'Цвет надписей в фокусе',
+   					name: 'Цвет надписей в фокусе',
    					hexValue: '',
    				},
 
    				focusedIconColor: {
-   					name_en: '',
-   					name_ru: 'Цвет иконок в фокусе (градиент)',
+   					name: 'Цвет иконок в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				focusedIconColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedBorderColor: {
-   					name_en: '',
-   					name_ru: 'Цвет обводки элемента в фокусе',
+   					name: 'Цвет обводки элемента в фокусе',
    					hexValue: '',
    				},
 
    				selectedCheckboxColor: {
-   					name_en: '',
-   					name_ru: 'Цвет выбранного чекбокса (градиент)',
+   					name: 'Цвет выбранного чекбокса (градиент)',
    					hexValue: '',
    				},
 
    				focusedCheckboxColor: {
-   					name_en: '',
-   					name_ru: 'Цвет чекбокса в фокусе (градиент)',
+   					name: 'Цвет чекбокса в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				focusedGotoColor: {
-   					name_en: '',
-   					name_ru: 'Цвет стрелки перехода в фокусе (градиент)',
+   					name: 'Цвет стрелки перехода в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				selectedCheckboxColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedCheckboxColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedGotoColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				activeIconColor: {
-   					name_en: '',
-   					name_ru: 'Цвет активных иконок (градиент)',
+   					name: 'Цвет активных иконок (градиент)',
    					hexValue: '',
    				},
 
    				activeIconColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				unreadBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет фона непрочитанного диалога (градиент)',
+   					name: 'Цвет фона непрочитанного диалога (градиент)',
    					hexValue: '',
    				},
 
    				unreadBackgroundColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				unreadCloudForegroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет количества непрочитанных',
+   					name: 'Цвет количества непрочитанных',
    					hexValue: '',
    				},
 
    				unreadCloudBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет фона количества непрочитанных (градиент)',
+   					name: 'Цвет фона количества непрочитанных (градиент)',
    					hexValue: '',
    				},
 
    				unreadCloudBackgroundColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedUnreadCloudForegroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет количества непрочитанных в фокусе',
+   					name: 'Цвет количества непрочитанных в фокусе',
    					hexValue: '',
    				},
 
    				focusedUnreadCloudBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет фона количества непрочитанных в фокусе (градиент)',
+   					name: 'Цвет фона количества непрочитанных в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				focusedUnreadCloudBackgroundColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				itemSeparatorColor: {
-   					name_en: '',
-   					name_ru: 'Цвет разделителя',
+   					name: 'Цвет разделителя',
    					hexValue: '',
    				},
 
    				footerColor: {
-   					name_en: '',
-   					name_ru: 'Цвет футера',
+   					name: 'Цвет футера',
    					hexValue: '',
    				},
 
    				nonLoadedContentColor: {
-   					name_en: '',
-   					name_ru: 'Цвет незагруженного контента',
+   					name: 'Цвет незагруженного контента',
    					hexValue: '',
    				},
 
    				sliderColor: {
-   					name_en: '',
-   					name_ru: 'Цвет слайдера (градиент)',
+   					name: 'Цвет слайдера (градиент)',
    					hexValue: '',
    				},
 
    				sliderColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				sliderLoadedColor: {
-   					name_en: '',
-   					name_ru: 'Цвет заполненной части слайдера (градиент)',
+   					name: 'Цвет заполненной части слайдера (градиент)',
    					hexValue: '',
    				},
 
    				sliderLoadedColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				sliderButtonColor: {
-   					name_en: '',
-   					name_ru: 'Цвет кнопки слайдера (градиент)',
+   					name: 'Цвет кнопки слайдера (градиент)',
    					hexValue: '',
    				},
 
    				sliderButtonColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedSliderButtonColor: {
-   					name_en: '',
-   					name_ru: 'Цвет кнопки слайдера в фокусе (градиент)',
+   					name: 'Цвет кнопки слайдера в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				focusedSliderButtonColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				sliderButtonBorderColor: {
-   					name_en: '',
-   					name_ru: 'Цвет обводки кнопки слайдера',
+   					name: 'Цвет обводки кнопки слайдера',
    					hexValue: '',
    				},
 
    				userMessageColor: {
-   					name_en: '',
-   					name_ru: 'Цвет отправленного сообщения (градиент)',
+   					name: 'Цвет отправленного сообщения (градиент)',
    					hexValue: '',
    				},
 
    				userMessageColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				somebodyMessageColor: {
-   					name_en: '',
-   					name_ru: 'Цвет полученного сообщения (градиент)',
+   					name: 'Цвет полученного сообщения (градиент)',
    					hexValue: '',
    				},
 
    				somebodyMessageColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				userMessageBorderColor: {
-   					name_en: '',
-   					name_ru: 'Цвет обводки отправленного сообщения',
+   					name: 'Цвет обводки отправленного сообщения',
    					hexValue: '',
    				},
 
    				somebodyMessageBorderColor: {
-   					name_en: '',
-   					name_ru: 'Цвет обводки полученного сообщения',
+   					name: 'Цвет обводки полученного сообщения',
    					hexValue: '',
    				},
 
    				actionMessageColor: {
-   					name_en: '',
-   					name_ru: 'Цвет служебных сообщений',
+   					name: 'Цвет служебных сообщений',
    					hexValue: '',
    				},
 
    				userMessageQuoteColor: {
-   					name_en: '',
-   					name_ru: 'Цвет полосы ответа в отправленном сообщении',
+   					name: 'Цвет полосы ответа в отправленном сообщении',
    					hexValue: '',
    				},
 
    				somebodyMessageQuoteColor: {
-   					name_en: '',
-   					name_ru: 'Цвет полосы ответа в полученном сообщении',
+   					name: 'Цвет полосы ответа в полученном сообщении',
    					hexValue: '',
    				},
 
    				messageContentBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет фона сообщения',
+   					name: 'Цвет фона сообщения',
    					hexValue: '',
    				},
 
    				spinnerIconColor: {
-   					name_en: '',
-   					name_ru: 'Цвет индикатора загрузки',
+   					name: 'Цвет индикатора загрузки',
    					hexValue: '',
    				},
 
    				onlineIconColor: {
-   					name_en: '',
-   					name_ru: 'Цвет индикатора онлайна',
+   					name: 'Цвет индикатора онлайна',
    					hexValue: '',
    				},
 
    				onlineBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет фона индикатора онлайна',
+   					name: 'Цвет фона индикатора онлайна',
    					hexValue: '',
    				},
 
    				dimmColor: {
-   					name_en: '',
-   					name_ru: 'Цвет фонового затенения',
+   					name: 'Цвет фонового затенения',
    					hexValue: '',
    				},
 
    				msgFieldBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет поля ввода сообщения',
+   					name: 'Цвет поля ввода сообщения',
    					hexValue: '',
    				},
 
    				likeColor: {
-   					name_en: '',
-   					name_ru: 'Цвет лайка (градиент)',
+   					name: 'Цвет лайка (градиент)',
    					hexValue: '',
    				},
 
    				likeColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				likeTextColor: {
-   					name_en: '',
-   					name_ru: 'Цвет счетчика лайков',
+   					name: 'Цвет счетчика лайков',
    					hexValue: '',
    				},
 
    				focusedLikeColor: {
-   					name_en: '',
-   					name_ru: 'Цвет лайка в фокусе (градиент)',
+   					name: 'Цвет лайка в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				focusedLikeColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedLikeTextColor: {
-   					name_en: '',
-   					name_ru: 'Цвет счетчика лайков в фокусе',
+   					name: 'Цвет счетчика лайков в фокусе',
    					hexValue: '',
    				},
 
    				scrollColor: {
-   					name_en: '',
-   					name_ru: 'Цвет полосы прокрутки',
+   					name: 'Цвет полосы прокрутки',
    					hexValue: '',
    				},
 
    				footerLineColor: {
-   					name_en: '',
-   					name_ru: 'Цвет тени футера',
+   					name: 'Цвет тени футера',
    					hexValue: '',
    				},
 
    				popupColor: {
-   					name_en: '',
-   					name_ru: 'Цвет всплывающего окна',
+   					name: 'Цвет всплывающего окна',
    					hexValue: '',
    				},
 
    				focusedSliderButtonBorderColor: {
-   					name_en: '',
-   					name_ru: 'Цвет обводки кнопки слайдера в фокусе',
+   					name: 'Цвет обводки кнопки слайдера в фокусе',
    					hexValue: '',
    				},
 
    				mutedUnreadCloudBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет количества непрочитанных у чатов с отключенными уведомлениями (градиент)',
+   					name: 'Цвет количества непрочитанных у чатов с отключенными уведомлениями (градиент)',
    					hexValue: '',
    				},
 
    				mutedUnreadCloudBackgroundColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
    				focusedMutedUnreadCloudBackgroundColor: {
-   					name_en: '',
-   					name_ru: 'Цвет количества непрочитанных у чатов с отключенными уведомлениями в фокусе (градиент)',
+   					name: 'Цвет количества непрочитанных у чатов с отключенными уведомлениями в фокусе (градиент)',
    					hexValue: '',
    				},
 
    				focusedMutedUnreadCloudBackgroundColor_: {
-   					name_en: '',
-   					name_ru: '',
+   					name: '',
    					hexValue: '',
    				},
 
@@ -1038,13 +946,13 @@
    						themingElement.className = "themingElement"	
    						themingElement.setAttribute("id", "elem-" + i)
    						if (i+"_" in colorData) { /* TODO: заменить title на "первый цвет", "второй цвет", onHover="previewEditor(this)"*/
-   							themingElement.innerHTML = '<span>' + colorData[i].name_ru + '</span>' +
+   							themingElement.innerHTML = '<span>' + colorData[i].name + '</span>' +
    						'<input type="color" title="' + i + '_" id="' +i+ '_" value="#' +colorData[i+"_"].hexValue + '" oninput="listListener(this);" class="colorInput">' +
    						'<input type="color" title="' + i + '" id="' +i+ '" value="#' +colorData[i].hexValue + '" oninput="listListener(this);" class="colorInput">';
    						themingElementsList.appendChild(themingElement);
    						}
    						else {
-   						themingElement.innerHTML = '<span>' + colorData[i].name_ru + '</span>' +
+   						themingElement.innerHTML = '<span>' + colorData[i].name + '</span>' +
    						'<input type="color" title="' + i + '" id="' +i+ '" value="#' +colorData[i].hexValue + '" oninput="listListener(this);" class="colorInput">';
    						themingElementsList.appendChild(themingElement);
    						}
@@ -1096,7 +1004,10 @@
    							elemPreview[i].style.color = "#" + colorData[inputElem.id].hexValue
    						}
    						else if (elemPreview[i].tagName == 'svg') {
-   							elemPreview[i].children[0].setAttribute("fill", "#" + colorData[inputElem.id].hexValue)
+   							elemPreview[i].children[0].setAttribute("fill", "#" + colorData[inputElem.id].hexValue);
+   						}
+   						else if (elemPreview[i].tagName == 'circle') {
+   							elemPreview[i].style.fill = "#" + colorData[inputElem.id].hexValue
    						}
    						else {
    							elemPreview[i].style.background = "#" + colorData[inputElem.id].hexValue
