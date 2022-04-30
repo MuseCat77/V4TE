@@ -1,5 +1,7 @@
-<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 	<title>Theme Editor</title>
 	<style type="text/css">
 	body {
@@ -71,6 +73,9 @@
 		float: right;
 		border: rgba(0, 0, 0, 0);
 		background-color: rgba(0, 0, 0, 0);
+	}
+	input[type=text] {
+		color: blue;
 	}
 	.ioForm {
 		width: 98%;
@@ -216,25 +221,7 @@
 					</div>
 				</div>
 				<div>
-					<svg width="265" height="40" viewBox="0 0 79.374999 13.229167">
-   						<rect
-   						style="fill:#0000ff;fill-rule:evenodd;stroke-width:0.234316"
-     id="rect931"
-     width="87.643234"
-     height="8.4571047"
-     x="-4.1341162"
-     y="2.3860314"
-     ry="4.2285523" />
-  <rect
-     style="fill:#ffffff;fill-rule:evenodd;stroke-width:0.221481"
-     id="rect931-5"
-     width="86.705757"
-     height="7.6377707"
-     x="-3.6653829"
-     y="2.7956977"
-     ry="3.8188853" />
-     <tspan x="10" y="10" class="small">https://www.codegrepper.com/code-examples/html/how+to+have+text+over+%3Csvg%3E</tspan>
-	</svg>		
+					<input class="borderColorPreview" type="text" value="e-mail" style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 10px 0; outline: none; text-color: bule;">
 				</div>
 				<div>
 					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
@@ -991,7 +978,6 @@
    					for (let i in elemPreview) {
    						if (elemPreview[i].tagName == 'linearGradient') {
    							/*TODO: change getElementsByClassName to getElementById if needed */
-   							console.log(elemPreview)
    							elemPreview[i].children[0].setAttribute("stop-color", startOfGradient)
    							elemPreview[i].children[1].setAttribute("stop-color", endOfGradient)
    						}
@@ -1007,7 +993,6 @@
    					let endOfGradient = "#" + colorData[inputElem.id].hexValue
    					for (let i in elemPreview) {
    						if (elemPreview[i].tagName == 'linearGradient') {
-   							console.log(elemPreview)
    							elemPreview[i].children[0].setAttribute("stop-color", startOfGradient)
    							elemPreview[i].children[1].setAttribute("stop-color", endOfGradient)
    						}
@@ -1021,18 +1006,26 @@
    					let elemPreview = Array.from(document.getElementsByClassName(inputElem.id + 'Preview'))
    					/*console.log(elemPreview)*/
    					for (let i in elemPreview) {
-   						if (elemPreview[i].tagName == 'SPAN' || elemPreview[i].tagName == 'B') {
-   							elemPreview[i].style.color = "#" + colorData[inputElem.id].hexValue
+   						switch (elemPreview[i].tagName) {
+   							case "SPAN":
+   								elemPreview[i].style.color = "#" + colorData[inputElem.id].hexValue;
+   								break;
+   							case "B":
+   								elemPreview[i].style.color = "#" + colorData[inputElem.id].hexValue;
+   								break;
+   							case "svg":
+   								elemPreview[i].children[0].setAttribute("fill", "#" + colorData[inputElem.id].hexValue);
+   								break;
+   							case "circle":
+   								elemPreview[i].style.fill = "#" + colorData[inputElem.id].hexValue;
+   								break;
+   							case "INPUT":
+   								elemPreview[i].style.borderColor = "#" + colorData[inputElem.id].hexValue;
+   								break;
+   							default:
+   								elemPreview[i].style.background = "#" + colorData[inputElem.id].hexValue;
    						}
-   						else if (elemPreview[i].tagName == 'svg') {
-   							elemPreview[i].children[0].setAttribute("fill", "#" + colorData[inputElem.id].hexValue);
-   						}
-   						else if (elemPreview[i].tagName == 'circle') {
-   							elemPreview[i].style.fill = "#" + colorData[inputElem.id].hexValue
-   						}
-   						else {
-   							elemPreview[i].style.background = "#" + colorData[inputElem.id].hexValue
-   						}
+   						console.log(elemPreview)
    					}
    				}
    			}
@@ -1055,16 +1048,16 @@
    				hexTob64();
    				let blob = new Blob(["VK4ME Theme\n" + themeName + "\n" + themeEngVer + "\n" + importedb64], {type: "text/plain;charset=utf-8"});
    				if(window.navigator.msSaveOrOpenBlob) {
-        			window.navigator.msSaveBlob(blob, themeName + ".theme");
-    			}
-    			else{
-        			const elem = window.document.createElement('a');
-        			elem.href = window.URL.createObjectURL(blob);
-        			elem.download = themeName + ".theme";        
-        			document.body.appendChild(elem);
-        			elem.click();        
-        			document.body.removeChild(elem);
-    			}
+        				window.navigator.msSaveBlob(blob, themeName + ".theme");
+    				}
+    				else{
+        				const elem = window.document.createElement('a');
+        				elem.href = window.URL.createObjectURL(blob);
+        				elem.download = themeName + ".theme";        
+        				document.body.appendChild(elem);
+        				elem.click();        
+        				document.body.removeChild(elem);
+    				}
    			}
    			previewInit();
    	</script>
