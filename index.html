@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
 	<title>Theme Editor</title>
@@ -73,9 +73,6 @@
 		float: right;
 		border: rgba(0, 0, 0, 0);
 		background-color: rgba(0, 0, 0, 0);
-	}
-	input[type=text] {
-		color: blue;
 	}
 	.ioForm {
 		width: 98%;
@@ -221,7 +218,8 @@
 					</div>
 				</div>
 				<div>
-					<input class="borderColorPreview" type="text" value="e-mail" style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 10px 0; outline: none; text-color: bule;">
+					<input class="borderColorPreview captionColorPreview" type="text" value="Text input with caption inside" style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 0px 0; outline: none;" onfocus="this.style.color = '#000000';" onblur="this.style.color = '#' + colorData.captionColor.hexValue;">
+					<input class="focusedBorderColorPreview captionColorPreview" type="text" value="Focused text input with caption inside" style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 10px 0; outline: none;" onfocus="this.style.color = '#000000';" onblur="this.style.color = '#' + colorData.captionColor.hexValue;">
 				</div>
 				<div>
 					<svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
@@ -275,7 +273,7 @@
 							<stop offset="0%" stop-color="#ff0000"/>
 							<stop offset="100%" stop-color="#ffa000"/>
 						</linearGradient>
-    					<path fill="url(#focusedCheckboxColorPreview)" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+    					<path fill="url(#focusedGotoColorPreview)" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
 					</svg>
 						<span class="focusedTextColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Focused goto chevron</span>
 				</div>
@@ -391,11 +389,10 @@
 				</div>
 				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
 				<div class="footerColorPreview" style="height:10px; background: red;"></div>
-				<div>
-					<span class="textColorPreview">Slider</span>
-				</div>
+<!-- TODO: fix margin by editing svg data -->
 				<div style="height: px; display: table-cell; vertical-align: middle;">
-					<svg width="270" height="50" viewBox="0 0 79.374999 13.229167">
+					<span class="textColorPreview">Slider</span>
+					<svg width="270" height="50" viewBox="0 0 79.374999 13.229167" style="margin-top: -25px; margin-bottom: -15px;">
 						<linearGradient class="sliderColorPreview" id="sliderColorPreview" x2="0" y2="1">
 							<stop offset="0%" stop-color="#ff0000"/>
 							<stop offset="100%" stop-color="#ffa000"/>
@@ -417,6 +414,45 @@
 				</div>
 				<div>
 					<span class="textColorPreview">Focused slider</span>
+				</div>
+				<div style="height: px; display: table-cell; vertical-align: middle;">
+					<svg width="270" height="50" viewBox="0 0 79.374999 13.229167" style="margin-top: -25px; margin-bottom: -15px;">
+						<linearGradient class="focusedliderColorPreview" id="sliderColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+						<linearGradient class="sliderLoadedColorPreview" id="sliderLoadedColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+						<linearGradient class="focusedSliderButtonColorPreview" id="focusedSliderButtonColorPreview" x2="0" y2="1">
+							<stop offset="0%" stop-color="#ff0000"/>
+							<stop offset="100%" stop-color="#ffa000"/>
+						</linearGradient>
+
+						<rect style="fill:url(#sliderLoadedColorPreview);fill-rule:evenodd;stroke-width:0.264583" width="25" height="2" x="-0.08514908" y="5.6"></rect>
+    					<rect style="fill:url(#sliderColorPreview);fill-rule:evenodd;stroke-width:0.404708" id="rect33-9" width="55" height="2" x="26" y="5.6"></rect>
+    					<circle class="focusedSliderButtonBorderColorPreview" style="fill-rule:evenodd;stroke-width:0.264583" id="path57" cx="24.480362" cy="6.5139046" r="3.0227923"></circle>
+    					<circle style="fill:url(#focusedSliderButtonColorPreview);fill-rule:evenodd;stroke-width:0.264583" id="path57-5" cx="24.437786" cy="6.5564795" r="2.5970469"></circle>
+      				</svg>
+				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div>
+					<svg class="nonLoadedContentColorPreview" style="width:30px; height:30px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
+    					<path fill="#ccc" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" id="path2" />
+    					<circle class="onlineBackgroundColorPreview" style="fill:#ffffff;stroke-width:1.48" id="path32" cx="16.926607" cy="16.926607" r="5.091743" />
+    					<circle class="onlineIconColorPreview" style="fill:#ff0000;stroke-width:1.224" id="path32-8" cx="16.926607" cy="16.926607" r="4.211009" />
+					</svg>
+					<div>
+						<span class="textColorPreview" style="line-height: 10px; float: left; padding-top: 10px;">N. Dude</span>
+						<span class="captionColorPreview" style="line-height: 10px; float: left; padding-top: 10px; padding-left: 5px;">8:08</span>
+					</div>
+					<br><br>
+					<div class="somebodyMessageColorPreview somebodyMessageBorderColor" style="width: 90px; border-radius: 0 10px 10px 10px;">
+						<span class="textColorPreview">foo bar baz</span>
+					</div>
+					<br>
 				</div>
 				<!--<div class="warn">Preview is under development</div>-->
 			</div>
@@ -981,6 +1017,10 @@
    							elemPreview[i].children[0].setAttribute("stop-color", startOfGradient)
    							elemPreview[i].children[1].setAttribute("stop-color", endOfGradient)
    						}
+   						if (elemPreview[i].tagName == 'DIV' && elemPreview[i].className == 'somebodyMessageColorPreview somebodyMessageBorderColor') {
+ 							elemPreview[i].style.background = "linear-gradient(" + startOfGradient + ", " + endOfGradient + ")";
+ 							elemPreview[i].style.borderColor = "#" + colorData.somebodyMessageBorderColor.hexValue;
+   						}
    						else {
    							elemPreview[i].style.background = "linear-gradient(" + startOfGradient + ", " + endOfGradient + ")"
    						}
@@ -1020,7 +1060,14 @@
    								elemPreview[i].style.fill = "#" + colorData[inputElem.id].hexValue;
    								break;
    							case "INPUT":
-   								elemPreview[i].style.borderColor = "#" + colorData[inputElem.id].hexValue;
+   								if (elemPreview[i].className == "focusedBorderColorPreview captionColorPreview") {
+   									elemPreview[i].style.borderColor = "#" + colorData.focusedBorderColor.hexValue;
+   									elemPreview[i].style.color = "#" + colorData.captionColor.hexValue;
+   								}
+   								if (elemPreview[i].className == "borderColorPreview captionColorPreview") {
+   									elemPreview[i].style.borderColor = "#" + colorData.borderColor.hexValue;
+   									elemPreview[i].style.color = "#" + colorData.captionColor.hexValue;
+   								}
    								break;
    							default:
    								elemPreview[i].style.background = "#" + colorData[inputElem.id].hexValue;
