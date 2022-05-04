@@ -438,6 +438,7 @@
 				</div>
 				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
 				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div class="messageContentBackgroundColorPreview">
 				<div>
 					<svg class="nonLoadedContentColorPreview" style="width:30px; height:30px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
     					<path fill="#ccc" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" id="path2" />
@@ -479,17 +480,24 @@
 						<span class="textColorPreview">Reply</span>
 					</div>
 				</div>
-				<span class="actionMessageColorPreview" style="text-align: center;">N. Dude pinned message</span>
-				<div style="padding-right: 5px;">
+				<div style="width: 95%; text-align: center;">
+					<span class="actionMessageColorPreview">N. Dude pinned message</span>
+				</div>
+				</div>
+				
+				<div class="unreadBackgroundColorPreview" style="padding-right: 5px; background-color: blue;">
 					<div>
 						<span class="captionColorPreview" style="line-height: 10px; float: right; padding-top: 5px; padding-left: 5px;">8:09</span>
 					</div>
 					<br><br>
 					<div class="userMessageColorPreview userMessageBorderColorPreview" style="margin-top: -15px; float: right; width: 100px; border-radius: 10px 10px 0px 10px; border: 1px solid red;">
 						<div class="userMessageQuoteColorPreview" style="width: 1px; height: 25px; background-color: blue; margin-top: 5px;"><span class="textColorPreview" style="white-space: nowrap; margin-left: 2px;">Reply</span></div>
-						<span class="textColorPreview">Another reply</span>
+						<span class="textColorPreview">Unread reply</span>
 					</div>
 					<br>
+				</div>
+				<div class="msgFieldBackgroundColorPreview" style="line-height: 40px; height: 40px;">
+					<span class=""></span>
 				</div>
 				<!--<div class="warn">Preview is under development</div>-->
 			</div>
@@ -684,7 +692,7 @@
    				},
 
    				activeIconColor: {
-   					name: 'Цвет активных иконок (градиент)',
+   					name: '[не используется] Цвет активных иконок (градиент)',
    					hexValue: '',
    				},
 
@@ -839,7 +847,7 @@
    				},
 
    				messageContentBackgroundColor: {
-   					name: 'Цвет фона сообщения',
+   					name: 'Цвет фона чата',
    					hexValue: '',
    				},
 
