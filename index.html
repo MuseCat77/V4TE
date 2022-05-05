@@ -114,7 +114,7 @@
 <body>
 	<div class="substrate">
 		<div class="heading">Theme Editor</div>
-		<div id="preview" class="backgroundColorPreview" >
+		<div id="preview" class="backgroundColorPreview">
 			<div class="gridWrapper">
 				<div class="mainColorPreview" style="height: 30px; background: linear-gradient(#454449, #222126);">
 					<span class="onMainTextColorPreview" style="color: #ffffff">Preview</span>
@@ -509,6 +509,14 @@
 				</div>
 				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
 				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div class="mainColorPreview" style="height: 30px; background: linear-gradient(#454449, #222126);">
+					<span class="onMainTextColorPreview" style="color: #ffffff">Topbar with spinner icon</span>
+					<svg class="spinnerIconColorPreview" style="width:24px; height:30px; float: right;" viewBox="0 0 24 24">
+		    			<path d="m 12,2 a 10,10 0 0 0 -10,10 10,10 0 0 0 0,0.01367 c 0.2365801,-0.0207 0.4273272,-0.01254 0.5839844,0.0332 h 0.099609 0.1425781 0.017578 c 0.071759,-0.0085 0.146888,-0.01541 0.2226562,-0.01758 0.089581,-0.0026 0.1759216,0.002 0.2480469,0.01758 0.1545854,-0.02528 0.3590638,-0.05701 0.6894531,-0.115234 A 8,8 0 0 1 12,4 a 8,8 0 0 1 0.193359,0.00586 c -0.004,-0.106392 -0.0059,-0.2138063 -0.0059,-0.3242188 v -0.2695312 -0.4375 -0.375 -0.3730469 -0.21875 A 10,10 0 0 0 12,2 Z" />
+					</svg>
+				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
 				<div>
 					<div>
 						<svg class="nonLoadedContentColorPreview" style="width:50px; height:60px; float: left; margin-left:-2px;" viewBox="0 0 24 24">
@@ -603,6 +611,17 @@
 						</svg>
 					</div>
 				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
+				<div class="dimmColorPreview" style="width: 98%; height: 300px;">
+					<div class="popupColorPreview" style="margin: auto; margin-top: 100px; width: 200px; height: 100px; border-radius: 10px;">
+						<br>
+						<span class="textColorPreview" style="line-height: 10px;">This is popup in front of dimmed background</span>
+						<span class="textColorPreview" style="line-height: 10px; float: right; margin-top: 40px; margin-right: 10px;">Ok</span>
+					</div>
+				</div>
+				<div class="footerLineColorPreview" style="height:1px; background: red;"></div>
+				<div class="footerColorPreview" style="height:10px; background: red;"></div>
 				<!--<div class="warn">Preview is under development</div>-->
 			</div>
 		</div>
@@ -1222,6 +1241,11 @@
    								}
    								if (elemPreview[i].className == "userMessageColorPreview userMessageBorderColorPreview") {
    									elemPreview[i].style.borderColor = "#" + colorData.somebodyMessageBorderColor.hexValue;
+   									break;
+   								}
+   								if (elemPreview[i].className == "dimmColorPreview") {
+   									elemPreview[i].style.background = "#" + colorData[inputElem.id].hexValue;
+   									elemPreview[i].style.background = elemPreview[i].style.background.slice(0, -1) + ", 0.6)";
    									break;
    								}
    							default:
