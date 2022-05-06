@@ -822,7 +822,8 @@
             Import theme
             <input type="file" name="imported-file" accept=".theme" onchange="fileHandler(this);">
         </div>
-        <div>
+        <div style="line-height: 20px;">
+            <a href="https://vk.com/album-185833676_283364727">Download themes</a><br>
             <a href="https://github.com/MuseCat77/vk4me_theme_editor">GitHub source repo</a>
         </div>
     </div>
@@ -1265,11 +1266,11 @@
     var themeName = 'NewTheme'
     var themeEngVer = '3.0.1'
 
-    /*
+    
     window.onbeforeunload = function (e) {
-        return "Unsaved changes will be gone";
- };
- */
+        return "Unsaved changes will be lost";
+ 	};
+
     function propChanger(prop) {
         if (prop.name == 'theme-name')
             themeName = prop.value
