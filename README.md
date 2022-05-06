@@ -4,3 +4,8 @@ Theme editor for VK4ME 3 theme engine that made in **single HTML file for portab
 **Works only in modern browsers**
 
 https://musecat77.github.io/V4TE/
+
+What may be done in the future:
+- Splitting a html file to ensure better maintaining 
+- Russian localisation
+- Theme catalogue
