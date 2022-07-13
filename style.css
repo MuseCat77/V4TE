@@ -19,9 +19,7 @@ img {
     color: #000000;
     text-align: center;
     margin: 5px;
-    border: 1px;
-    border-style: solid;
-    border-color: #d4bc4c;
+    border: 1px solid #d4bc4c;
     min-height: 7px;
 }
 
