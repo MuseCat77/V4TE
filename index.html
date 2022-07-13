@@ -143,13 +143,13 @@
                 <span class="onMainTextColorPreview"
                       style="line-height: 20px; float: left; padding: 5px;">Left SB</span>
                 <span class="onMainTextColorPreview"
-                      style="line-height: 20px; float: left; padding: 5px; padding-left: 55px;">8:08</span>
+                      style="line-height: 20px; float: left; padding: 5px 5px 5px 55px;">8:08</span>
                 <span class="onMainTextColorPreview focusedMainColorPreview"
                       style="line-height: 20px; float: right; padding: 5px;">Right SB</span>
             </div>
             <div class="footerLineColorPreview" style="height:1px; background: red;"></div>
             <div class="footerColorPreview" style="height:10px; background: red;"></div>
-            <div class="backgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+            <div class="backgroundColorPreview" style="color: #ff0000;">
                 <svg style="width:30px; height:60px; float: left;" viewBox="0 0 24 24">
                     <path fill="url(#iconColorPreview)"
                           d="M12 8C8.44 8 6.65 12.31 9.17 14.83C11.69 17.35 16 15.56 16 12C16 9.79 14.21 8 12 8M5 15H3V19C3 20.1 3.9 21 5 21H9V19H5M5 5H9V3H5C3.9 3 3 3.9 3 5V9H5M19 3H15V5H19V9H21V5C21 3.9 20.1 3 19 3M19 19H15V21H19C20.1 21 21 20.1 21 19V15H19"/>
@@ -162,7 +162,7 @@
                     <span class="descriptionColorPreview" style="line-height: 25px; float: left;">description</span>
                 </div>
             </div>
-            <div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+            <div class="focusedBackgroundColorPreview" style="background: linear-gradient(#ff0000, #ffa000);">
                 <svg style="width:30px; height:60px; float: left;" viewBox="0 0 24 24">
                     <linearGradient class="focusedIconColorPreview" id="focusedIconColorPreview" x2="0" y2="1">
                         <stop offset="0%" stop-color="#ff0000"/>
@@ -179,15 +179,19 @@
                 </div>
             </div>
             <div>
-                <input class="borderColorPreview captionColorPreview" type="text" value="Text input with caption inside"
-                       style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 0px 0; outline: none;"
-                       onfocus="this.style.color = '#000000';"
-                       onblur="this.style.color = '#' + colorData.captionColor.hexValue;">
-                <input class="focusedBorderColorPreview captionColorPreview" type="text"
-                       value="Focused text input with caption inside"
-                       style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 10px 0; outline: none;"
-                       onfocus="this.style.color = '#000000';"
-                       onblur="this.style.color = '#' + colorData.captionColor.hexValue;">
+                <label>
+                    <input class="borderColorPreview captionColorPreview" type="text" value="Text input with caption inside"
+                           style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 0 0; outline: none;"
+                           onfocus="this.style.color = '#000000';"
+                           onblur="this.style.color = '#' + colorData.captionColor.hexValue;">
+                </label>
+                <label>
+                    <input class="focusedBorderColorPreview captionColorPreview" type="text"
+                           value="Focused text input with caption inside"
+                           style="background: transparent; border: 2px solid #000000; border-radius: 10px; width: 95%; margin: 10px 0 10px 0; outline: none;"
+                           onfocus="this.style.color = '#000000';"
+                           onblur="this.style.color = '#' + colorData.captionColor.hexValue;">
+                </label>
             </div>
             <div>
                 <svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
@@ -200,7 +204,7 @@
                 </svg>
                 <span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Blank checkbox ring</span>
             </div>
-            <div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+            <div class="focusedBackgroundColorPreview" style="background: linear-gradient(#ff0000, #ffa000);">
                 <svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
                     <linearGradient class="focusedCheckboxColorPreview" id="focusedCheckboxColorPreview" x2="0" y2="1">
                         <stop offset="0%" stop-color="#ff0000"/>
@@ -223,7 +227,7 @@
                 </svg>
                 <span class="textColorPreview" style="line-height: 20px; float: left; padding-top: 10px;">Selected checkbox</span>
             </div>
-            <div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+            <div class="focusedBackgroundColorPreview" style="background: linear-gradient(#ff0000, #ffa000);">
                 <svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
                     <linearGradient class="focusedCheckboxColorPreview" id="focusedCheckboxColorPreview" x2="0" y2="1">
                         <stop offset="0%" stop-color="#ff0000"/>
@@ -242,7 +246,7 @@
                 <span class="textColorPreview"
                       style="line-height: 20px; float: left; padding-top: 10px;">Goto chevron</span>
             </div>
-            <div class="focusedBackgroundColorPreview" style="color: linear-gradient(#ff0000, #ffa000);">
+            <div class="focusedBackgroundColorPreview" style="background: linear-gradient(#ff0000, #ffa000);">
                 <svg style="width:30px; height:40px; float: right;" viewBox="0 0 24 24">
                     <linearGradient class="focusedGotoColorPreview" id="focusedGotoColorPreview" x2="0" y2="1">
                         <stop offset="0%" stop-color="#ff0000"/>
@@ -393,7 +397,7 @@
             <div class="footerLineColorPreview" style="height:1px; background: red;"></div>
             <div class="footerColorPreview" style="height:10px; background: red;"></div>
             <!-- TODO: fix margin by editing svg data -->
-            <div style="height: px; display: table-cell; vertical-align: middle;">
+            <div style="display: table-cell; vertical-align: middle;">
                 <span class="textColorPreview">Slider</span>
                 <svg width="270" height="50" viewBox="0 0 79.374999 13.229167"
                      style="margin-top: -25px; margin-bottom: -15px;">
@@ -424,7 +428,7 @@
             <div>
                 <span class="textColorPreview">Focused slider</span>
             </div>
-            <div style="height: px; display: table-cell; vertical-align: middle;">
+            <div style="display: table-cell; vertical-align: middle;">
                 <svg width="270" height="50" viewBox="0 0 79.374999 13.229167"
                      style="margin-top: -25px; margin-bottom: -15px;">
                     <linearGradient class="focusedliderColorPreview" id="sliderColorPreview" x2="0" y2="1">
@@ -485,7 +489,7 @@
                     </div>
                     <br><br>
                     <div class="userMessageColorPreview userMessageBorderColorPreview"
-                         style="margin-top: -15px; float: right; width: 75px; border-radius: 10px 10px 0px 10px; border: 1px solid red;">
+                         style="margin-top: -15px; float: right; width: 75px; border-radius: 10px 10px 0 10px; border: 1px solid red;">
                         <span class="textColorPreview">Sent msg</span>
                     </div>
                     <br>
@@ -529,7 +533,7 @@
                 </div>
                 <br><br>
                 <div class="userMessageColorPreview userMessageBorderColorPreview"
-                     style="margin-top: -15px; float: right; width: 100px; border-radius: 10px 10px 0px 10px; border: 1px solid red;">
+                     style="margin-top: -15px; float: right; width: 100px; border-radius: 10px 10px 0 10px; border: 1px solid red;">
                     <div class="userMessageQuoteColorPreview"
                          style="width: 1px; height: 25px; background-color: blue; margin-top: 5px;"><span
                             class="textColorPreview" style="white-space: nowrap; margin-left: 2px;">Reply</span></div>
@@ -605,7 +609,7 @@
                     </svg>
                     <span class="captionColorPreview" style="line-height: 4px; float: left; padding: 10px">1</span>
                 </div>
-                <div style="align-self: right; width: 90px;">
+                <div style="align-self: auto; width: 90px;">
                     <span class="captionColorPreview" style="line-height: 4px; float: right; padding: 10px">58</span>
                     <svg style="width:24px; height:24px; float: right;" viewBox="0 0 24 24">
                         <path fill="url(#iconColorPreview)"
@@ -660,7 +664,7 @@
                     </svg>
                     <span class="captionColorPreview" style="line-height: 4px; float: left; padding: 10px">1</span>
                 </div>
-                <div style="align-self: right; width: 90px;">
+                <div style="align-self: auto; width: 90px;">
                     <span class="captionColorPreview" style="line-height: 4px; float: right; padding: 10px">58</span>
                     <svg style="width:24px; height:24px; float: right;" viewBox="0 0 24 24">
                         <path fill="url(#iconColorPreview)"
@@ -680,7 +684,7 @@
             <div class="footerColorPreview" style="height:10px; background: red;"></div>
             <div class="dimmColorPreview" style="width: 98%; height: 300px;">
                 <div class="popupColorPreview"
-                     style="margin: auto; margin-top: 100px; width: 200px; height: 100px; border-radius: 10px;">
+                     style="margin: 100px auto auto;width: 200px; height: 100px; border-radius: 10px;">
                     <br>
                     <span class="textColorPreview" style="line-height: 10px;">This is popup in front of dimmed background</span>
                     <span class="textColorPreview"
@@ -710,11 +714,15 @@
     <div class="halfDivButtons" style="text-align: right;">
         <div>
             Theme name
-            <input type="text" name="theme-name" value="NewTheme" size="18" oninput="propChanger(this)">
+            <label>
+                <input type="text" name="theme-name" value="NewTheme" size="18" oninput="propChanger(this)">
+            </label>
         </div>
         <div>
             Target VK4ME version
-            <input type="text" name="theme-eng-ver" value="3.1.0" size="9" oninput="propChanger(this)">
+            <label>
+                <input type="text" name="theme-eng-ver" value="3.1.0" size="9" oninput="propChanger(this)">
+            </label>
         </div>
         <input type="reset" name="reload-page" value="Reset" onclick="history.go(0);">
         <input type="button" name="save-theme" value="Save theme" onclick="saveStaticDataToFile();">
