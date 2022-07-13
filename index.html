@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Theme Editor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./coloris/coloris.min.css"/>
 </head>
 <body>
 <div class="ioForm">
@@ -708,7 +709,8 @@
         </div>
         <div style="line-height: 20px;">
             <a href="https://vk.com/album-185833676_283364727">Download themes</a><br>
-            <a href="https://github.com/MuseCat77/vk4me_theme_editor">GitHub source repo</a>
+            <a href="https://github.com/MuseCat77/vk4me_theme_editor">GitHub source repo</a><br>
+            <a href="https://github.com/mdbassit/Coloris">Coloris</a>
         </div>
     </div>
     <div class="halfDivButtons" style="text-align: right;">
@@ -721,13 +723,15 @@
         <div>
             Target VK4ME version
             <label>
-                <input type="text" name="theme-eng-ver" value="3.1.0" size="9" oninput="propChanger(this)">
+                <input type="text" name="theme-eng-ver" value="3.2.3" size="9" oninput="propChanger(this)">
             </label>
         </div>
         <input type="reset" name="reload-page" value="Reset" onclick="history.go(0);">
         <input type="button" name="save-theme" value="Save theme" onclick="saveStaticDataToFile();">
     </div>
 </div>
+
+<script src="./coloris/coloris.min.js"></script>
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

@@ -428,6 +428,12 @@ var themeEngVer = '3.0.1'
 //     return "Unsaved changes will be lost";
 // };
 
+Coloris({
+    themeMode: 'auto',
+    alpha: false,
+    format: 'hex',
+});
+
 function propChanger(prop) {
     if (prop.name === 'theme-name')
         themeName = prop.value
@@ -504,12 +510,12 @@ function listEditor() {
             themingElement.setAttribute("id", "elem-" + i)
             if (i + "_" in colorData) { /* TODO: заменить title на "первый цвет", "второй цвет", onHover="previewEditor(this)"*/
                 themingElement.innerHTML = '<span>' + colorData[i].name + '</span>' +
-                    '<input type="color" title="' + i + '_" id="' + i + '_" value="#' + colorData[i + "_"].hexValue + '" oninput="listListener(this);" class="colorInput">' +
-                    '<input type="color" title="' + i + '" id="' + i + '" value="#' + colorData[i].hexValue + '" oninput="listListener(this);" class="colorInput">';
+                    '<input data-coloris type="text" title="' + i + '" id="' + i + '" value="#' + colorData[i].hexValue + '" oninput="listListener(this);" class="colorInput">'+
+                    '<input data-coloris type="text" title="' + i + '_" id="' + i + '_" value="#' + colorData[i + "_"].hexValue + '" oninput="listListener(this);" class="colorInput">';
                 themingElementsList.appendChild(themingElement);
             } else {
                 themingElement.innerHTML = '<span>' + colorData[i].name + '</span>' +
-                    '<input type="color" title="' + i + '" id="' + i + '" value="#' + colorData[i].hexValue + '" oninput="listListener(this);" class="colorInput">';
+                        '<input data-coloris type="text" title="' + i + '" id="' + i + '" value="#' + colorData[i].hexValue + '" oninput="listListener(this);" class="colorInput">';
                 themingElementsList.appendChild(themingElement);
             }
         }

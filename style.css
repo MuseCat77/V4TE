@@ -65,32 +65,34 @@ input[type=button] {
     font-family: sans-serif;
 }
 
-input[type=color] {
-    margin: 1px 0 1px 1px;
-    height: 29px;
-    float: right;
-    border: rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-}
-
 .ioForm {
     text-align: left;
     max-width: 710px;
     margin: auto;
 }
 
+.colorInput {
+    width: 80px;
+    display: table-cell;
+    font-family: monospace;
+}
+
 .themingElement {
     width: 100%;
     text-align: left;
-    line-height: 30px;
     border-bottom: 1px;
     border-bottom-style: solid;
+    padding: 5px 0 5px 0;
+    display: table;
 }
 
 .themingElement span {
     font-size: small;
     background-color: white;
     margin-left: 5px;
+    display: table-cell;
+    width: 290px;
+    vertical-align: middle;
 }
 
 .gridWrapper { /*ex gridWrapper*/
