@@ -1,0 +1,119 @@
+body {
+    background-color: #fff;
+    color: #000000;
+    text-align: left;
+    font-family: sans-serif;
+    margin: 20px;
+}
+
+a, a:visited {
+    color: #000000;
+}
+
+img {
+    border: 0;
+}
+
+.warn {
+    background-color: #f9f6e7;
+    color: #000000;
+    text-align: center;
+    margin: 5px;
+    border: 1px solid #d4bc4c;
+    min-height: 7px;
+}
+
+.substrate {
+    max-width: 710px;
+    margin: auto;
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.substrate::-webkit-scrollbar {
+    display: none;
+}
+
+#themingElementsList {
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    border: 1px solid black;
+    overflow: auto;
+    height: 400px;
+}
+
+#preview {
+    white-space: normal;
+    display: inline-block;
+    border: 1px solid black;
+    width: 300px;
+    overflow: auto;
+    height: 400px;
+}
+
+textarea {
+    width: 100%;
+    font-family: monospace;
+}
+
+input[type=button] {
+    font-family: sans-serif;
+}
+
+.ioForm {
+    text-align: left;
+    max-width: 710px;
+    margin: auto;
+}
+
+.colorInput {
+    width: 80px;
+    display: table-cell;
+    font-family: monospace;
+}
+
+.themingElement {
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    padding: 5px 0 5px 0;
+    display: table;
+}
+
+.themingElement span {
+    font-size: small;
+    background-color: white;
+    margin-left: 5px;
+    display: table-cell;
+    width: 290px;
+    vertical-align: middle;
+}
+
+.gridWrapper { /*ex gridWrapper*/
+    display: grid;
+    text-align: left;
+}
+
+.gridWrapper span {
+    line-height: 30px;
+}
+
+.gridWrapper div {
+    padding-left: 5px;
+}
+
+.halfDivButtons {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+
+.halfDivButtons div {
+    margin-bottom: 5px;
+}
